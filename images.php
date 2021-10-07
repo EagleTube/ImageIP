@@ -32,7 +32,7 @@ function fetchIP()
     if($info->status=="fail")
     {
         $headers = getallheaders();
-        $proxy = "-- Proxied/VPN IP Address! --\n\n";
+        $proxy = "-- Private/CF Proxied IP Address! --\n\n";
         $agent = "User-Agent : ".$headers['User-Agent']."\n";
         $referer = "Referrer : ".$headers['Referer']."\n";
         $contents = "IP Address : " . $ipaddress . "\n" . $agent . $referer . $proxy;
