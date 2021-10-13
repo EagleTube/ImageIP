@@ -52,8 +52,8 @@ function fetchIP()
         $timezone = "TimeZone : "  . $info -> timezone ."\n";
         $isp = "ISP : "  . $info -> isp ."\n\n";
 
-        $agent = "User-Agent : ".$headers['User-Agent']."\n";
-        $referer = "Referrer : ".$headers['Referer']."\n";
+        $agent = "User-Agent : ".$headers['user-agent']."\n"; #lowercase and uppercase sensitve
+        $referer = "Referrer : ".$headers['referer']."\n"; #lowercase and uppercase sensitve
         $contents = "IP Address : " . $ipaddress . "\n" . $agent . $referer . $country . $region . $city . $latitude . $longitude . $timezone . $isp;
         $f = fopen("log.txt","a+");
         fwrite($f,$contents);
