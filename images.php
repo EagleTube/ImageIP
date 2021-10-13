@@ -33,8 +33,8 @@ function fetchIP()
     {
         $headers = getallheaders();
         $proxy = "-- Private/CF Proxied IP Address! --\n\n";
-        $agent = "User-Agent : ".$headers['User-Agent']."\n";
-        $referer = "Referrer : ".$headers['Referer']."\n";
+        $agent = "User-Agent : ".$headers['user-agent']."\n";
+        $referer = "Referrer : ".$headers['referer']."\n";
         $contents = "IP Address : " . $ipaddress . "\n" . $agent . $referer . $proxy;
         $f = fopen("log.txt","a+");
         fwrite($f,$contents);
